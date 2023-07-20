@@ -15,7 +15,7 @@ To implement this solution, follow these steps:
   - Use structs to simplify the serialization and deserialization processes.
 
 - Kafka Partition
-  Two options are available for Kafka partition management. In this application, option 2 was chosen to simplify the producer code, relying on Kafka's partitioner.
+  - Two options are available for Kafka partition management. In this application, option 2 was chosen to simplify the producer code, relying on Kafka's partitioner.
   1. Specify the partition when sending the topic at the producer side:
      This approach provides fine-grained control over message partitioning, which is useful when specific partitioning logic or ordered processing and data locality are required.
   2. Allow Kafka to determine the partition using a partitioner:
