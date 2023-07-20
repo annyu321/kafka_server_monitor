@@ -14,14 +14,14 @@ To implement this solution, follow these steps:
   - Leverage embedded structs for loose coupling, adhering to best practices.
   - Use structs to simplify the serialization and deserialization processes.
 
-- Kafka Partition
+- Kafka Partition\
   Two options are available for Kafka partition management. In this application, option 2 was chosen to simplify the producer code, relying on Kafka's partitioner.
   - Specify the partition when sending the topic at the producer side:
      This approach provides fine-grained control over message partitioning, which is useful when specific partitioning logic or ordered processing and data locality are required.
- - Allow Kafka to determine the partition using a partitioner:
+  - Allow Kafka to determine the partition using a partitioner:
      By relying on Kafka's built-in partitioner or a custom partitioner, Kafka automatically determines the target partition for the message based on configured logic. It can evenly distribute messages across partitions using the message key or round-robin algorithms.
 
-- Server Events Table Schema Design  
+- Server Events Table Schema Design\  
   The events table is designed to store server events and includes an auto-incrementing id column along with the topic, timestamp, and message columns. The table is utilizing the MergeTree engine, which is optimized for efficient querying, and it is ordered by the id column to enhance query performance. This schema allows for the systematic storage and retrieval of server events.
    
 ## Execution
