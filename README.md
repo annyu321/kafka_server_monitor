@@ -1,7 +1,7 @@
 # Server Performance and Health Monitor
 This approach utilizes Kafka and ClickHouse for event streaming and log aggregation, aiming to monitor server performance and health. The producer employs Go concurrency and mutex to monitor CPU, memory, disk space, uptime, and network metrics, generating streaming data and publishing events to the Kafka broker. On the other hand, the consumer subscribes to the Kafka topic, receives the events, and stores them in the ClickHouse time series database.
 
-## Setup
+## Setup Test
 To implement this solution, follow these steps:
 - Install Kafka.
 - Install ClickHouse.
